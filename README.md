@@ -2,6 +2,8 @@
 Simple landing page made with pure HTML/CSS/JS for students of ["Internet of Things"](http://iot.lviv.ua) programm in Lviv Polytechnic National University.
 The website was made by students of [the same programm](http://iot.lviv.ua), who decided to contribute into education and to inspire young generation 
 
+![](readme-images/landing.png)
+
 ---
 ## Design
 [Click to view in Figma](https://www.figma.com/file/j4Cj7lPDyhHJbg54tCw4Zc/1st-coding-task?node-id=2172%3A760)
