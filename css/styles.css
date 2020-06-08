@@ -4,6 +4,12 @@ body {
   color: #505f98;
 }
 
+@media screen and (max-width: 768px) {
+  body {
+    text-align: center;
+  }
+}
+
 a {
   text-decoration: none;
   color: #505f98;
@@ -18,30 +24,51 @@ button {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+/*** variables ***/
+:root {
+  --color-dark: #111b47;
+  --color-font-dark: #091133;
+
+  --font-size-normal: 16px;
+  --font-size-small: 14px;
+  --font-size-tiny: 12px;
+}
+
 /*** global classes ***/
 
 .title {
   font-weight: 500;
   font-size: 36px;
-  color: #091133;
+  color: var(--color-font-dark);
   margin-bottom: 16px;
   line-height: 48px;
 }
 
 .paragraph {
-  font-size: 16px;
+  font-size: var(--font-size-normal);
   line-height: 26px;
   color: #6f7cb2;
   margin-top: 6px;
 }
 
+.img-container {
+  max-width: 100%;
+}
+
 /*** header ***/
 .header {
-  /* background-image: url(../images/header-image.svg); */
+  /* background-image: url(../images/hero-image.svg); */
   /* background-repeat: no-repeat; */
   /* background-position: right top; */
-  background: url(../images/header-image.svg) no-repeat right top;
-  height: 1103px;
+  /* background: url(../images/hero-image.svg) no-repeat right top; */
+  min-height: 1103px;
+  overflow: hidden;
 }
 
 .header__container {
@@ -51,12 +78,29 @@ button {
   padding-top: 12px;
 }
 
+@media screen and (max-width: 768px) {
+  .header__container {
+    flex-direction: column;
+  }
+
+  .header__container > * {
+    margin-top: 20px;
+  }
+}
+
+.header__menu-icon {
+  width: 40px;
+}
+
 .header__nav ul {
   display: flex;
 }
 
 .header__nav-item {
-  font-size: 14px;
+  font-size: var(--font-size-small);
+}
+
+.header__nav-item:not(:last-child) {
   margin-right: 60px;
 }
 
@@ -69,20 +113,38 @@ button {
 .header__buy-now {
   width: 160px;
   height: 26px;
-  background: #111b47;
+  background: var(--color-dark);
   border-radius: 2px;
   color: #ffffff;
   font-weight: 500;
-  font-size: 12px;
+  font-size: var(--font-size-tiny);
 }
 
 /*** hero ***/
 .hero__container {
   padding-top: 250px;
+  position: relative;
 }
 
 .hero__inner {
-  width: 540px;
+  max-width: 540px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero__inner {
+    margin: 0 auto;
+  }
+}
+
+.hero__illustration {
+  position: absolute;
+  top: -10%;
+  right: -720px;
+  z-index: -1;
+}
+
+.hero__illustration > img {
+  max-width: 100%;
 }
 
 .hero__heading {
@@ -90,7 +152,7 @@ button {
   font-size: 50px;
   line-height: 66px;
   letter-spacing: 1px;
-  color: #091133;
+  color: var(--color-font-dark);
   margin-bottom: 20px;
 }
 
@@ -102,23 +164,50 @@ button {
 
 .hero__bottom {
   margin-top: 70px;
+  display: flex;
+  align-items: center;
 }
 
 .hero__button {
   width: 189px;
   height: 36px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: var(--font-size-normal);
   color: white;
-  background: #111b47;
+  background: var(--color-dark);
   border-radius: 2px;
 }
 
 .hero__button.outlined {
   background: transparent;
-  color: #091133;
-  border: 2px solid #091133;
+  color: var(--color-font-dark);
+  border: 2px solid var(--color-font-dark);
   margin-left: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero__container {
+    padding-top: 50px;
+  }
+
+  .hero__illustration {
+    display: none;
+  }
+
+  .hero__bottom {
+    flex-direction: column;
+  }
+
+  .hero__button {
+    font-size: 20px;
+    width: 249px;
+    height: 48px;
+  }
+
+  .hero__button.outlined {
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
 
 /*** light-fast ***/
@@ -162,6 +251,12 @@ button {
   margin-top: 220px;
 }
 
+@media screen and (max-width: 768px) {
+  .intro {
+    margin-top: 40px;
+  }
+}
+
 .intro:first-child {
   margin-top: 120px;
 }
@@ -172,12 +267,19 @@ button {
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  .intro > .container {
+    flex-direction: column;
+  }
+}
+
 .intro__inner {
   max-width: 445px;
 }
 
 .intro__image {
   max-width: 100%;
+  margin-bottom: 20px;
 }
 
 /*** pricing ***/
@@ -192,9 +294,10 @@ button {
 }
 
 .pricing__container {
-  width: 600px;
-  padding: 204px 0 208px;
-  margin: 0 auto;
+  max-width: 600px;
+  padding-top: 204px;
+  padding-bottom: 208px;
+  margin: auto;
 }
 
 .pricing__price {
@@ -207,7 +310,7 @@ button {
 }
 
 .pricing__label {
-  font-size: 16px;
+  font-size: var(--font-size-normal);
   line-height: 26px;
   text-align: center;
   color: #222f65;
@@ -215,7 +318,7 @@ button {
 }
 
 .pricing__buy__text {
-  font-size: 14px;
+  font-size: var(--font-size-small);
   color: #5d6970;
   margin-bottom: 10px;
 }
@@ -223,15 +326,15 @@ button {
 .pricing__buy__button {
   width: 190px;
   height: 32px;
-  background: #111b47;
+  background: var(--color-dark);
   border-radius: 2px;
   color: #ffffff;
-  font-size: 14px;
+  font-size: var(--font-size-small);
 }
 
 /*** footer ***/
 .footer {
-  background: #E7ECFF;
+  background: #e7ecff;
   padding: 60px 0 32px;
 }
 
@@ -248,7 +351,7 @@ button {
 
 .footer__branding__date {
   font-weight: 500;
-  font-size: 14px;
+  font-size: var(--font-size-small);
   color: #939ea4;
 }
 
@@ -260,10 +363,10 @@ button {
 
 .footer__branding__label {
   width: 110px;
-  background: #111b47;
+  background: var(--color-dark);
   text-align: center;
   font-weight: 500;
-  font-size: 12px;
+  font-size: var(--font-size-tiny);
   color: #ffffff;
   border-radius: 2px;
   padding: 5px 0;
@@ -277,7 +380,7 @@ button {
 }
 
 .footer__links {
-  font-size: 14px;
+  font-size: var(--font-size-small);
   color: #929ecc;
 }
 
@@ -290,15 +393,36 @@ button {
 }
 
 .footer__links a {
-  color: #929ECC;
+  color: #929ecc;
 }
 
 .footer__social {
   display: flex;
+  justify-content: center;
 }
 
 .footer__social__link {
   width: 16px;
   height: 16px;
+}
+
+.footer__social__link:not(:first-child) {
   margin-left: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__navigation,
+  .footer__branding,
+  .footer__links ul {
+    flex-direction: column;
+  }
+
+  .footer__branding > *{
+    margin-bottom: 15px;
+  }
+
+  .footer__links li {
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
 }
