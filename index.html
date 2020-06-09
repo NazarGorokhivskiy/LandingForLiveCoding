@@ -15,24 +15,30 @@
   <!-- My styles -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-  <header class="header">
-    <div class="container header__container">
-      <nav class="header__nav">
-        <ul>
-          <li class="header__nav-item">
-            <a class="heaader__nav-link" href="">Home</a>
-          </li>
-          <li class="header__nav-item">
-            <a class="heaader__nav-link" href="">About</a>
-          </li>
-          <li class="header__nav-item">
-            <a class="heaader__nav-link" href="">Contact</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="header__title">Landie</div>
-      <button class="header__buy-now">Buy Now</button>
+  <section class="hero">
+    <div class="container">
+      <header class="header">
+        <div class="header__menu" onclick="toggleMenu()">
+          <img src="images/menu-icon.svg" alt="Menu icon">
+        </div>
+        <nav id="nav-links" class="header__nav">
+          <ul>
+            <li class="header__nav-item">
+              <a class="heaader__nav-link" href="">Home</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="heaader__nav-link" href="">About</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="heaader__nav-link" href="">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__title">Landie</div>
+        <button class="header__buy-now">Buy Now</button>
+      </header>
     </div>
     <div class="container hero__container">
       <div class="hero__inner">
@@ -53,8 +59,8 @@
         <img src="images/hero-image.svg" alt="Hero image" />
       </div>
     </div>
-  </header>
- <section class="intro">
+  </section>
+  <section class="intro">
     <div class="container">
       <img src="images/section-image1.svg" alt="Some intro image" class="intro__image">
       <div class="intro__inner">
@@ -146,5 +152,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
+
 </html>
