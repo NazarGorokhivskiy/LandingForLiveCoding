@@ -10,6 +10,12 @@ body {
   }
 }
 
+@media screen and (max-width: 450px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
 a {
   text-decoration: none;
   color: #505f98;
@@ -35,24 +41,24 @@ button {
   --color-dark: #111b47;
   --color-font-dark: #091133;
 
-  --font-size-normal: 16px;
-  --font-size-small: 14px;
-  --font-size-tiny: 12px;
+  --font-size-normal: 1rem;
+  --font-size-small: .875rem;
+  --font-size-tiny: .75rem;
 }
 
 /*** global classes ***/
 
 .title {
   font-weight: 500;
-  font-size: 36px;
+  font-size: 2.25rem;
   color: var(--color-font-dark);
   margin-bottom: 16px;
-  line-height: 48px;
+  line-height: 3rem;
 }
 
 .paragraph {
   font-size: var(--font-size-normal);
-  line-height: 26px;
+  line-height: 1.625rem;
   color: #6f7cb2;
   margin-top: 6px;
 }
@@ -97,7 +103,7 @@ button {
 
 .header__title {
   font-weight: 900;
-  font-size: 26px;
+  font-size: 1.62rem;
   color: #37447e;
 }
 
@@ -201,17 +207,17 @@ button {
 
 .hero__heading {
   font-weight: 500;
-  font-size: 50px;
-  line-height: 66px;
+  font-size: 3.125rem;
+  line-height: 4.125rem;
   letter-spacing: 1px;
   color: var(--color-font-dark);
   margin-bottom: 20px;
 }
 
 .hero__paragraph {
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 16px;
-  line-height: 30px;
+  line-height: 1.875rem;
 }
 
 .hero__bottom {
@@ -251,7 +257,7 @@ button {
   }
 
   .hero__button {
-    font-size: 20px;
+    font-size: 1.25rem;
     width: 249px;
     height: 48px;
   }
@@ -327,7 +333,7 @@ button {
 
 .pricing__label {
   font-size: var(--font-size-normal);
-  line-height: 26px;
+  line-height: 1.625rem;
   text-align: center;
   color: #222f65;
   margin-bottom: 60px;
