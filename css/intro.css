@@ -1,0 +1,35 @@
+/*** intro sections ***/
+.intro {
+  margin-top: 220px;
+}
+
+@media screen and (max-width: 768px) {
+  .intro {
+    margin-top: 40px;
+  }
+}
+
+.intro:first-child {
+  margin-top: 120px;
+}
+
+.intro > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .intro > .container {
+    flex-direction: column;
+  }
+}
+
+.intro__inner {
+  max-width: 445px;
+}
+
+.intro__image {
+  max-width: 100%;
+  margin-bottom: 20px;
+}

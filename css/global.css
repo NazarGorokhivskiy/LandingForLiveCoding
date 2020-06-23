@@ -1,0 +1,70 @@
+/*** variables ***/
+:root {
+  --color-dark: #111b47;
+  --color-font-dark: #091133;
+
+  --font-size-md: 1rem;
+  --font-size-sm: 0.875rem;
+  --font-size-xs: 0.75rem;
+}
+
+/*** default overrides ***/
+
+body {
+  background: #fff;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: #505f98;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #505f98;
+}
+
+button {
+  border: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+/*** global classes ***/
+
+.title {
+  font-weight: 500;
+  font-size: 2.25rem;
+  color: var(--color-font-dark);
+  margin-bottom: 16px;
+  line-height: 3rem;
+}
+
+.paragraph {
+  font-size: var(--font-size-md);
+  line-height: 1.625rem;
+  color: #6f7cb2;
+  margin-top: 6px;
+}
+
+.img-container {
+  max-width: 100%;
+}
