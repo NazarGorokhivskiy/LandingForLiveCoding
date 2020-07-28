@@ -125,45 +125,9 @@ button {
   margin-left: 30px;
 }
 
-/*** light-fast ***/
-.light-fast {
-  padding: 110px 0;
-}
-
-.light-fast > .container {
-  display: flex;
-  align-items: center;
-}
-
-.light-fast__image {
-  padding-left: 30px;
-}
-
-.light-fast__info {
-  display: flex;
-  margin-top: 80px;
-}
-
-.light-fast__info__item:first-child {
-  margin-right: 30px;
-}
-
-.light-fast__info__title {
-  font-weight: 500;
-  font-size: 16px;
-  color: #091133;
-  margin: 14px 0;
-}
-
-.light-fast__info__text {
-  font-size: 12px;
-  line-height: 18px;
-  color: #5d6970;
-}
-
 /*** intro sections ***/
 .intro {
-  margin-top: 220px;
+  /* margin-top: 220px; */
 }
 
 .intro:first-child {
