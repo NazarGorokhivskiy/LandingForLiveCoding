@@ -1,6 +1,6 @@
 # Landing Website For Live Coding sessions
 Simple landing page made with pure HTML/CSS/JS for students of ["Internet of Things"](http://iot.lviv.ua) programm in Lviv Polytechnic National University.
-The website was made by students of [the same programm](http://iot.lviv.ua), who decided to contribute into education and to inspire young generation 
+The website was made by students of [the same program](http://iot.lviv.ua), who decided to contribute into education and to inspire young generation 
 
 ![](readme-images/landing.png)
 
